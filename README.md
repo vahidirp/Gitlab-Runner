@@ -8,8 +8,9 @@
 
 * Install Docker
 * Stop containers if exist
-* Creating directories and copy docker compose as template
-* Create network
+* Creating directories and copy docker compose as template ( It depends on traefik is True or False in inventory file. )
+* Docker Login ( It depends to credentials is available in inventory file. )
+* Create Docker network
 * Deploy gitlab runner
 * Deploy traefik as reverse proxy
 * Config gitlab runner and register by default variable or by inventory variables for each host.
@@ -36,3 +37,11 @@ scrape_configs:
 
 
 #### Please contribute and giving me feedback, Happy for any feature add or fixes from you.
+
+# Change Log
+All notable changes to this project will be documented in this file.
+
+### V1.0.4 - 2025-04-01 
+> Fix bashscript inventory generator template problem when using traefik : True
+
+> Fix playbook file variable in bashscript.
