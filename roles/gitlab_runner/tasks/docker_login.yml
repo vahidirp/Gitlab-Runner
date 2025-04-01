@@ -1,0 +1,9 @@
+---
+- name: Log in to Docker repository if credentials provided
+  ansible.builtin.shell: |
+    docker login {{ repo_url }} -u {{ repo_username }} -p {{ repo_password }}
+  when: 
+    - repo_url is defined
+    - repo_username is defined
+    - repo_password is defined
+  no_log: true
